@@ -4,6 +4,6 @@ const {create, getAll, remove, getOne} = require('../controllers/deviceControlle
 router.get('/', getAll);
 router.get('/:id', getOne);
 router.post('/', create);
-router.delete('/', remove);
+router.delete('/:id', remove);
 
 module.exports = router;
