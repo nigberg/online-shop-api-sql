@@ -3,6 +3,6 @@ const { create, getAll, remove } = require('../controllers/brandController');
 
 router.get('/', getAll);
 router.post('/', create);
-router.delete('/', remove);
+router.delete('/:id', remove);
 
 module.exports = router;
