@@ -12,6 +12,7 @@ const { RATE_LIMITER_CONFIGURATIONS } = require('./utils/constants');
 const limiter = rateLimit(RATE_LIMITER_CONFIGURATIONS);
 const centralizedErrorHandler = require('./middlewares/centralizedErrorHandler');
 const NotFoundError = require('./utils/errors/NotFoundError');
+const path = require('path');
 
 const {PORT = 5000} = process.env;
 
@@ -24,6 +25,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(limiter);
 app.use(express.json());
 app.use(fileUpload({}));
+app.use(express.static(path.resolve(__dirname, 'static')));
 app.use('/', router);
 app.use((req, res, next) => {
     const err = new NotFoundError(`Route ${req.url} is not supported in this app`);
