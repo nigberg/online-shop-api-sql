@@ -1,16 +1,16 @@
-## online-shop-api-sql
-# Backend part of online shop project  
+# online-shop-api-sql
+## Backend part of online shop project  
 ______________________________________
 
-# Built with technologies:
+## Built with technologies:
 _Node.js_  
 _Express.js_  
 _PostgreSQL_  
 _Sequelize_  
 _JWT authentication_  
 
-# IDE used:  
+## IDE used:  
 _Visual Studio Code_  
 
-# Author:  
+## Author:  
 _Meir Nigberg_  
