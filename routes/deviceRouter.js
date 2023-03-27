@@ -1,10 +1,10 @@
 const router = require('express').Router();
 const {create, getAll, remove, getOne} = require('../controllers/deviceController');
-const auth = require('../middlewares/auth');
+const checkRole = require('../middlewares/checkRole');
 
 router.get('/', getAll);
 router.get('/:id', getOne);
-router.post('/', auth, create);
-router.delete('/:id', auth, remove);
+router.post('/', checkRole, create);
+router.delete('/:id', checkRole, remove);
 
 module.exports = router;
